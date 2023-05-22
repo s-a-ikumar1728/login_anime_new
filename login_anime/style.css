@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;0,700;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open Sans', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+}
+.container{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container i{
+    position: absolute;
+    inset: 0;
+    border: 2px inset #fff;
+    transition: 0.5s;
+}
+.container i:nth-child(1){
+    border-radius:72% 28% 79% 21% / 54% 31% 69% 46% ;
+    animation: animate 6s linear infinite ;
+}
+.container i:nth-child(2){
+    border-radius:19% 81% 12% 88% / 54% 54% 46% 46% ;  
+    animation: animate2 4s linear infinite reverse  ;
+}
+.container i:nth-child(3){
+    border-radius:53% 47% 46% 54% / 54% 54% 46% 46% ;
+    animation: animate 5s linear infinite ;
+}
+.container:hover i {
+    border: 6px inset var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate2 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.container .login{
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.container .login h2{
+    font-size: 2em;
+    color: #fff;
+}
+.container .login .i-box input{
+    position: relative;
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px outset #fff;
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+}
+.container .login .i-box input::placeholder{
+    color: rgba(255,255,255, 0.75);
+}
+.container .login .i-box input[type="submit"]{
+    background: linear-gradient(45deg,green,coral);
+    border: none;
+    cursor: pointer;
+}
+.container .login .links{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 20px  ;
+}
+.container .login .links a{
+    color: #fff;
+    text-decoration: none;
+}
